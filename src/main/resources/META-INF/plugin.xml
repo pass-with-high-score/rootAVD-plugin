@@ -1,0 +1,26 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.github.rootavd.plugin</id>
+    <name>RootAVD Manager</name>
+    <vendor>RootAVD Team</vendor>
+    <description><![CDATA[
+        <p><b>RootAVD Manager</b> is a plugin for Android Studio to help you root your Android Virtual Devices (AVD) using the rootAVD script.</p>
+        <p>Features:</p>
+        <ul>
+            <li>List running AVDs.</li>
+            <li>Detect compatible system images.</li>
+            <li>Automate Magisk injection using rootAVD logic.</li>
+        </ul>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.android</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="RootAVD" 
+                    secondary="false" 
+                    icon="/toolWindowIcon.svg" 
+                    anchor="right" 
+                    factoryClass="com.github.rootavd.plugin.RootAVDToolWindowFactory" />
+    </extensions>
+</idea-plugin>
